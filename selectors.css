@@ -1,0 +1,108 @@
+/* 1. Universal selector - Bütün elementlər üçün ümumi stil */
+* {
+    padding: 0;
+}
+
+/* 2. Type selector (element selector) - Bütün body elementləri üçün fon rəngi */
+body {
+    background-color: #f0f0f0;
+}
+
+/* 3. Class selector - intro sinfi üçün şrift ölçüsü */
+.intro {
+    font-size: 18px;
+}
+
+/* 4. ID selector - "important" ID-li elementi vurğulamaq üçün */
+#important {
+    font-weight: bold;
+    color: red;
+}
+
+/* 5. Descendant selector - "section" daxilindəki "article" elementləri üçün arxa fon rəngi */
+section article {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 6. Child selector - "header" daxilindəki birbaşa "h1" elementləri üçün */
+header > h1 {
+    color: navy;
+}
+
+/* 7. Adjacent sibling selector - Bir-birinə qonşu olan "h2" və "p" elementləri üçün */
+h2 + p {
+    margin-top: 10px;
+}
+
+/* 8. General sibling selector - "h2" ilə eyni səviyyədə olan bütün "p" elementləri üçün */
+h2 ~ p {
+    font-style: italic;
+}
+
+/* 9. Attribute selector - "href" atributu olan bütün linklər üçün */
+a[href] {
+    text-decoration: none;
+    color: blue;
+}
+
+/* 10. Grouping selector - Bir neçə element üçün ümumi stil (h1 və h2 başlıqlarını stilizə etmək üçün) */
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
+
+/* 11. Pseudo-class :hover - Hover halında linklərin rəngini dəyişmək üçün */
+a:hover {
+    color: green;
+}
+
+/* 12. Pseudo-class :nth-child - İkinci "li" elementinin stilini dəyişmək üçün */
+li:nth-child(2) {
+    color: purple;
+}
+
+/* 13. Pseudo-class :first-child - İlk "p" elementini stilizə etmək üçün */
+p:first-child {
+    margin-bottom: 20px;
+}
+
+/* 14. Pseudo-class :last-child - Son "li" elementini stilizə etmək üçün */
+li:last-child {
+    font-weight: bold;
+}
+
+/* 15. Pseudo-element ::before - "article" başlıqlarından əvvəl mətn əlavə etmək üçün */
+h2::before {
+    content: "Başlıq: ";
+    font-size: 14px;
+    color: gray;
+}
+
+/* 16. Pseudo-element ::after - "article" başlıqlarından sonra mətn əlavə etmək üçün */
+h2::after {
+    content: " (end)";
+    font-size: 14px;
+    color: gray;
+}
+
+/* 17. Pseudo-element ::first-letter - "intro" paragrafının ilk hərfini böyütmək üçün */
+.intro::first-letter {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 18. Pseudo-class :not - "special" sinfinə malik olmayan "article" elementləri üçün */
+article:not(.special) {
+    border: 1px solid #ddd;
+}
+
+/* 19. Pseudo-class :nth-of-type - Hər "ul" elementinin ilk "li" elementini stilizə etmək üçün */
+ul li:nth-of-type(1) {
+    color: teal;
+}
+
+/* 20. Pseudo-class :empty - Boş olan "footer" elementini vurğulamaq üçün */
+footer:empty {
+    background-color: lightgray;
+}
