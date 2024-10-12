@@ -1,53 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./test2.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>About Me</title>
 </head>
 <body>
-    <h1>GeeksForGeeks</h1>
-    <div>
-        <ul>
-            <li> java </li>
-            <li> python</li>
-            <li> C++</li>
-        </ul>
+    <div class="container">
+        <div class="profile">
+            <img src="data:image/jpeg;base64,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"alt="Leon France" class="profile-img">
+            <h1>Leon France (he/him)</h1>
+            <h2>Game Developer</h2>
+            <button class="btn">Email me</button>
+            <div class="social-links">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i> 
+               <i class="fab fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                I am a tech-savvy individual with a Bachelor's degree in Software Development,
+                seeking employment as a mobile game developer. I am passionate about 
+                consistently advancing my knowledge and skills. I have attended multiple seminars 
+                and boot camps on coding and game development.
+            </p>
+            <div class="buttons">
+                <button class="btn">Resume</button>
+                <button class="btn">Portfolio</button>
+            </div>
+        </div>
     </div>
-    <div class="yellow">
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>PHP</li>
-        </ul>
-    </div>
-    <div>
-        <ul>
-            <li>C#</li>
-            <li>R</li>
-            <li>Matlab</li>
-        </ul>
-    </div>
-
-    <h3 class="coding">Coding</h3>
-    
-   <div>
-    <span class="span">Inside div and is inside span</span>
-   </div>
-  <div>
-    <p>Inside div but not inside span inside div paragraph</p>
-  </div>
-  <div>
-    <span class="element">Inside div but not outside span with class element</span>
-  </div><br>
-  <div>
-    <span class="elem">Inside div but not outside span with id element</span>
-  </div><br>
-  <div>
-    <span class="elemen">Inside div but not outside span with another class element</span>
-  </div>
-  <a href="geeksforgeeks.com"> click here for geeksforgeeks.com</a>
-  <a href="google.com" class="google"> click here for google.com</a>
 </body>
 </html>

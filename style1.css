@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.cards{
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icons{
+    margin: 20px;
+    height: 300px;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: white;
+    /* transition: background-color 0.3s ease; */
+}
+.card h2 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 15px 0;
+}
+i{
+    font-size: 70px;
+}
+.button{
+    color: white;
+    background-color: black;
+   height: 50px;
+    font-size: 25px;
+    border-radius: 15%;
+}
+.icons:hover {
+    background-color: pink; 
+    color: #fff; 
+}
+
+.card:hover h2, 
+.card:hover p {
+    color: #fff; 
+}
+
+.card:hover button {
+    background-color: #fff; 
+    color: #000;
+}
+
+
+.card.twitter {
+    border-color: #1DA1F2;
+}
