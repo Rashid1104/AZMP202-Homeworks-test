@@ -322,3 +322,18 @@ border-bottom-left-radius: 8px;
     font-size: 0.9rem;
 color: #fff;
 }
+.form1{
+    width: 250px;
+    border: 2px solid black;
+}
+.incard{
+    width: 245px;
+}
+.form2{
+    width: 270px;
+    height: 70vh;
+    border: 2px solid black;
+}
+.head-title{
+    color: #fff;
+}
