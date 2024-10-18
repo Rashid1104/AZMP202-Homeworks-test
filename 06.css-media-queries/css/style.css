@@ -181,6 +181,9 @@ h1, h2, h3 {
     color: white;
 }
 
+.hero img{
+    height: 74.5vh;
+}
 .hero h2 {
     font-size: 2rem;
     color: white;
@@ -189,9 +192,9 @@ h1, h2, h3 {
 
 .cta-button {
     padding: 1rem 2rem;
-    background-color: yellow;
+    background-color: rgb(228, 207, 17);
     border: none;
-    font-size: 1rem;
+    font-size: 1.75rem;
 }
 
 
@@ -281,5 +284,8 @@ footer {
 .social-icons i:hover {
     background-color: #ffcc00; 
     color: #fff; 
+}
+.hero h2{
+    font-size: 7rem;
 }
 
