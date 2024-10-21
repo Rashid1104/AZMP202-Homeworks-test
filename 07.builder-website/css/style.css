@@ -173,8 +173,8 @@ nav ul li a:hover {
 .img-for-1 .overlay {
     position: absolute;
     top: 4%;
-    left: 3.75%;
-    width: 96.4%;
+    left: 2.75%;
+    width: 97.3%;
     height: 92%;
     background-color: rgba(0, 0, 0, 0.6); 
     opacity: 0;
@@ -314,10 +314,10 @@ nav ul li a:hover {
 }
 .col-3 .overlay {
     position: absolute;
-    top: 4.6%;
-    left: 6%;
-    width: 87.8%;
-    height: 75.6%;
+    top: 3.3%;
+    left: 4.5%;
+    width: 91.5%;
+    height: 82.7%;
     background-color: rgba(0, 0, 0, 0.6); 
     opacity: 0;
     transition: opacity 1.2s ease;
