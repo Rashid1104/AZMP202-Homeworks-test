@@ -510,21 +510,21 @@ footer h2 {
    }
 .email-btn input{
     border: none;
-    border-top-left-radius: 20%;
+    /* border-top-left-radius: 20%;
     border-bottom-left-radius: 20%;
     border-top-right-radius: 20%;
-    border-bottom-right-radius: 20%; 
-    border-radius: 15%;
+    border-bottom-right-radius: 20%;  */
+    border-radius: 30px;
     margin: 10px 0;
     width: 410px;
-    height: 35px;
+    height: 45px;
 }
 .email-btn .btn-add{
     background-color: #ffcc00;
     border-color: #ffcc00;
     position: absolute;
     border-radius: 50%;
-    top: 22%;
+    top: 15.8%;
     right: 10%;
     /* z-index: 1; */
     width: 40px;
