@@ -1,0 +1,99 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+header{
+   
+}
+.cont{
+    margin-bottom: 100px;
+    
+}
+.cont{
+    font-size: 4rem;
+}
+.lead{
+    opacity: 0.54;
+    font-size: 0.94;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 116, 226);
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+}
+.icons i{
+    font-size: 2.2rem;
+    color: white;
+}
+.x-part{
+    opacity: 0.54;
+}
+.mo{
+    opacity: 0.54;
+}
+.text-i{
+    font-size: 0.88rem;
+    opacity: 0.54;
+}
+.text-v{
+    font-size: 0.88rem;
+   
+}
+textarea{
+    width: 50%;
+}
+.text-opa{
+    font-size: 1.02rem;
+    opacity: 0.54;
+}
+.button{
+   display: flex;
+   justify-content: center;
+}
+.button .btn{
+   width: 200px;
+ }
+ .form{
+    display: flex;
+    justify-content: center;
+ }
+ .texts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .cards-t{
+    width: 40%;
+ }
+ .cards-i{
+    width: 90%;
+ }
+ #about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .form-control{
+    width: 300px;
+ }
+ .form-controller{
+    width: 500px;
+ }
+ .foot{
+    color: white;
+ }
+ .icon-square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: white;
+    font-size: 2.5rem;
+ }
