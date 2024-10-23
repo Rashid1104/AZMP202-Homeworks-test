@@ -59,13 +59,15 @@ textarea{
    width: 200px;
  }
  .form{
-    display: flex;
-    justify-content: center;
- }
- .texts{
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+ }
+ .texts{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
  }
  .cards-t{
     width: 40%;
@@ -96,4 +98,10 @@ textarea{
     border-radius: 50%;
     color: white;
     font-size: 2.5rem;
+ }
+ .container .r-2{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
