@@ -30,7 +30,15 @@ header{
                     border: 1px solid gray;
                     border-radius: 12px;
                     color: $color-a;
+                    transition: all 0.6s;
                 }
+                    button:hover{
+
+                       background-color: $color-a;
+                       color: black;
+opacity: 0.24;
+                
+                    }
             }
         }
     }

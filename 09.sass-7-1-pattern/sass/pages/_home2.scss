@@ -1,0 +1,36 @@
+#sect{
+.container{
+    @include flexBOX(center,center);
+    .main-2{
+        h1{
+            padding-bottom: 40px;
+            text-align: center;
+            color: $color-a;
+            font-size: 72px;
+        }
+        p{
+            text-align: center;
+            opacity: 0.54;
+            font-size: 1rem;
+            color: #FFFFFFA3;
+
+        }
+    }
+}
+}
+
+
+#sector-new-1{ 
+    @include flexBOX;
+    padding: 30px 0;
+    .container{
+       
+        .img-tables{
+            
+            img{
+                width: 574px;
+                height: 40px;
+            }
+        }
+    }
+}

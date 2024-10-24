@@ -1,27 +1,104 @@
 footer{
-    #sector-4{
-        background-color: #F3D1BF; 
-        padding: 80px 0;
+    
+    background-color: #F3D1BF;
+    #footer{
+        
         .container{
-            .row{
-       
-                .col-4{
-                    font-size: 30px;
-                    
-width: 351px;
-height: 176px;
-border: 1px solid rgba($color: #000000, $alpha: 0.5);
+            padding: 80px 0;
+background-color:#EF6D58;
+@include flexBOX(space-evenly
+,center);
 
-h2{
-    color: #391400;
-    padding: 20px 0;
+    .left-side{
+        
+        h1{
+            padding: 30px 0;
+            color: $color-a;
+            font-size: 56px;
+        }
+        p{
+            padding: 30px 0;
+            color: $color-a;
+            font-size: 1rem ;
+            opacity: 0.54;
+        }
+        button{ 
+            width: 154px;
+            height: 48px;
+            background-color: #FFFFFF;
+            color: #391400;
+            border: none;
+                font-size: 14px;
+        }
+    }
+    .right-side{
+        img{
+            width: 100%;
+
+        }
+    }
 }
-p{
-    color: #391400;
-    font-size: 20px;
-}
+        }
+        #footer-2{
+            .container{
+                @include flexBOX;
+                padding: 80px 0; 
+                
+                h4{
+                    font-size: 24PX;
+                    color: #391400;
                 }
+nav{
+    h5{
+        padding: 20px 0;
+        font-size: 1rem;
+        color: #EF6D58;
+        letter-spacing: 5px;
+        }
+        ul{
+            li{
+                padding: 2px 0;
+                font-size: 1rem;
+                color: #391400;
+                
+
             }
         }
-      } 
+}
+.icons{
+    @include flexBOX;
+        gap: 10px;
+    .icon{
+        @include flexBOX(center,center);
+       width: 48px;
+    height: 48px;
+    background-color: #EF6D58;
+    border-radius: 50%;
+    font-size: 1rem;
+color: #ffffff;
+
+    }
+}
+                
+            }
+        }
+        #footer-3{
+            .container{
+                @include flexBOX;
+                padding: 50px 0;
+                border-top: 1px solid  #d8ad96;
+                ;
+                .first{
+                    font-size: 1rem;
+                    color: #391400;
+                }
+                .second{
+                    @include flexBOX;
+                    gap: 10px;
+                    font-size: 1rem;
+                    color: #391400;
+
+                }
+                }
+            }
 }
