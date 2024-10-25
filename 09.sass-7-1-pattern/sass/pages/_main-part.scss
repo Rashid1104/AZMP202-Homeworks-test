@@ -1,0 +1,295 @@
+main{
+    background-color: #F3D1BF; 
+    #gabriel-img{
+        padding: 3rem 0;
+        .gabriel-img{
+            @include flexBOX(center,center);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #gabriel-content{
+        padding: 3rem 0;
+        @include flexBOX(center,center);
+        .container{          
+            h5{
+                font-size: 1rem;
+                color: #EF6D58;
+                letter-spacing: 5px;
+    
+            }
+            h3{
+                font-size: 40px;
+               color: #391400;
+    
+            }
+            
+       .text-s{
+        p{
+            font-size: 1rem;
+            color: #391400A3;
+        }
+        
+
+       }
+        }
+
+    }
+    #sector-4{
+        @include flexBOX(center,center);
+       padding: 3rem 0;
+      .text{
+        p{
+            color: #391400A3;         
+            font-size: 1rem;
+           }
+           .text-1{
+            padding: 3rem 0;
+           }
+           .text-2{
+            padding: 3rem 0;
+           }
+      }
+    }
+    #sector-1{
+        @include flexBOX(center,center);
+        .container{
+            
+            .row{
+                
+                .col-6{
+                    @include flexBOX(center,center);
+                    gap: 20px;
+                    font-size: 30px;
+                    width: 586px;
+                    height: 176px;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.5);
+                    .icons{
+                        width: 112px;
+                       height:  112px;
+                       background-color: #EF6C57;
+                       border-radius: 50%;
+                       @include flexBOX(center,center);
+    i{
+       font-size: 3rem;
+                       color: #ffffff;
+    }
+                    }
+                    h2{
+                        
+                        color: #391400;
+    
+                        font-size: 40px;
+                    }
+                    p{
+                       
+                        color: #391400;
+    font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #sector-2{
+        @include flexBOX(center,center);
+       padding: 3rem 0;
+        .container{
+            // text-align: center;
+            h5{
+                font-size: 1rem;
+                color: #EF6D58;
+                letter-spacing: 5px;
+    
+            }
+            h3{
+                font-size: 56px;
+               color: #391400;
+    
+            }
+            p{
+                font-size: 1rem;
+                color: #391400A3;
+    
+    
+            }
+        }
+    }
+    #sector-3{
+        @include flexBOX(center,center);
+       padding: 3rem 0;
+       .video{
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+       }
+      .text{
+        p{
+            color: #391400A3;
+            
+            font-size: 1rem;
+           }
+           .text-1{
+            padding: 3rem 0;
+           }
+           .text-2{
+            padding: 3rem 0;
+           }
+      }
+    }
+    #sector-4{
+        @include flexBOX(center,center);
+       padding: 3rem 0;
+      .text{
+        p{
+            color: #391400A3;         
+            font-size: 1rem;
+           }
+           .text-1{
+            padding: 3rem 0;
+           }
+           .text-2{
+            padding: 3rem 0;
+           }
+      }
+    }
+    .sect{
+       
+        #sector-5{
+           
+           padding: 3rem 0;
+           
+         .container{
+            padding: 3rem 0;
+            border-top: 1px solid rgba($color: #000000, $alpha: 0.5);
+           border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
+            @include flexBOX(center,center);
+            .texts-2{
+           
+                h5{
+                    font-size: 1rem;
+                    color: #EF6D58;
+                    letter-spacing: 5px;
+        
+                }
+                h3{
+                    font-size: 40px;
+                   color: #391400;
+        
+                }
+                p{
+                    font-size: 1rem;
+                    color: #391400A3;
+        
+        
+                }
+              }
+         }
+        }
+    }
+}
+.bg-footer{
+    background-color: #28293E;
+    #footer{
+        
+        .container{
+            padding: 80px 0;
+background-color:#EF6D58;
+@include flexBOX(space-evenly
+,center);
+
+    .left-side{
+        
+        h1{
+            padding: 30px 0;
+            color: $color-a;
+            font-size: 56px;
+        }
+        p{
+            padding: 30px 0;
+            color: $color-a;
+            font-size: 1rem ;
+            opacity: 0.54;
+        }
+        button{ 
+            width: 154px;
+            height: 48px;
+            background-color: #FFFFFF;
+            color: #391400;
+            border: none;
+                font-size: 14px;
+        }
+    }
+    .right-side{
+        img{
+            width: 100%;
+
+        }
+    }
+}
+        }
+        #footer-2{
+            .container{
+                @include flexBOX;
+                padding: 80px 0; 
+                
+                h4{
+                    font-size: 24PX;
+                    color: #ffffff;
+                }
+nav{
+    h5{
+        padding: 20px 0;
+        font-size: 1rem;
+        color: #EF6D58;
+        letter-spacing: 5px;
+        }
+        ul{
+            li{
+                padding: 2px 0;
+                font-size: 1rem;
+                color: #ffffff;
+                
+
+            }
+        }
+}
+.icons{
+    @include flexBOX;
+        gap: 10px;
+    .icon{
+        @include flexBOX(center,center);
+       width: 48px;
+    height: 48px;
+    background-color: #EF6D58;
+    border-radius: 50%;
+    font-size: 1rem;
+color: #ffffff;
+
+    }
+}
+                
+            }
+        }
+        #footer-3{
+            .container{
+                @include flexBOX;
+                padding: 50px 0;
+                border-top: 1px solid #3A3C56;
+                
+                
+                .first{
+                    font-size: 1rem;
+                    color: #ffffff;
+                }
+                .second{
+                    @include flexBOX;
+                    gap: 10px;
+                    font-size: 1rem;
+                    color: #ffffff;
+
+                }
+                }
+            }
+}

@@ -1,0 +1,24 @@
+main{
+    #section1{
+        background-color: #F3D1BF; 
+        padding: 80px 0;
+       .container{
+        
+           .main{
+               @include flexBOX(center,center);
+               gap: 50px;
+               .left-side{
+                h3{
+                    color: #391400;
+    
+                    font-size: 40px;
+                }
+                     
+                   } 
+               .right-side{
+   
+               }
+           }
+       }
+      }
+}
