@@ -1,0 +1,106 @@
+footer{
+    padding: 3rem 0;
+   .container{
+    margin-left: 200px;
+   @include flexBOX;
+    .row{ 
+       .col-6{
+        h3{
+font-size: 18px;
+padding-top: 10px ;
+padding-bottom: 40px ;
+        }
+        p{
+            padding: 10px 0;
+            font-size: 14px;
+            opacity: 0.54;
+        }
+        .email-btn{
+position: relative;
+            input{
+                width: 400px;
+                height: 34px;
+                background-color: #F9F9FF;
+                border: none;
+                border-radius: 50px;
+    
+            }
+            button{
+                background-color: #F6214B;
+                color: $color-a;
+                position: absolute;
+                left: 74%;
+                width: 80px;
+                height: 34px;
+                border: none;
+                border-radius: 50px;
+            }
+        }
+        
+        .sides{
+            @include flexBOX;
+            .left-side{
+                h3{
+                    font-size: 18px;
+                    padding: 20px 0;
+                }
+                p{
+                    line-height: 1.35;
+                    font-size: 14px;
+                    opacity: 0.54;
+                    padding-bottom: 30px;
+                }
+            }
+            .right-side{
+                h3{
+                    font-size: 18px;
+                    padding: 20px 0;
+                }
+                p{
+                    line-height: 1.35;
+                    font-size: 14px;
+                    opacity: 0.54;
+                    
+                }
+                h2{
+                    font-size: 24px;
+                    color: #F6214B;
+                }
+            }
+        }
+        
+       } 
+    }
+   }
+   .container{
+    @include flexBOX;
+    .last{
+        width: 85%;
+        @include flexBOX;
+        // gap: 100px;
+        .text1{
+text-align: left;
+opacity: 0.54;
+span{
+    color:#F6214B;
+}
+        }
+        .text2{
+            text-align: right;
+            button{
+                width: 48px;
+                height: 48px;
+                background-color: $color-b;
+                color: $color-a;
+                border: none;
+                transition: all 0.5s;
+            }
+            button:hover{
+                
+                background-color: #F6214B;
+               
+            }
+                    }
+       }
+   }
+}

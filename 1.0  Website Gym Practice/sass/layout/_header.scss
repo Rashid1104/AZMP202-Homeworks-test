@@ -1,0 +1,54 @@
+header{  
+    position: sticky;
+   .head-part{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(180, 177, 177);
+    .container{ 
+        .header{   
+            @include flexBOX;
+            height: 82px;
+           h3{
+            font-size: 1rem;
+           }
+           .phone-icon{
+            @include flexBOX;
+            gap: 20px;
+           }
+           .logo-icon{
+            @include flexBOX(center,center);
+            width: 82px;
+            height: 82px;
+            background-color: #F6214B;
+            i{
+                font-size: 20px;
+                color: $color-a;
+            }
+           }
+        }
+    }
+   }
+     nav{    
+        @include flexBOX(center,center);
+        height: 42px;          
+                ul{
+                    gap: 20px;
+                    @include flexBOX;
+                    li{
+                        font-size: 12px;
+                        select{
+                            border: none;
+                        }
+                        a{
+
+                            color: $color-b;
+                            transition: all 0.6s;
+                        }
+                        a:hover{
+                            color:#F7214B;
+        
+                        }
+                        
+                    }
+                }
+            }
+    }
