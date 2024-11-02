@@ -168,48 +168,106 @@
 // }
 // console.log(max);
 
-const products = [
-    {
-      id: 1,
-      title: "Smartphone",
-      description: "A high-end smartphone with the latest features.",
-      price: 799.99,
-    },
-    {
-      id: 2,
-      title: "Laptop",
-      description: "Powerful laptop with a large screen and fast processor.",
-      price: 1299.99,
-    },
-    {
-      id: 3,
-      title: "Coffee Maker",
-      description: "An automatic coffee maker with a built-in grinder.",
-      price: 99.99,
-    },
-    {
-      id: 4,
-      title: "Headphones",
-      description: "Wireless over-ear headphones with noise-cancellation.",
-      price: 199.99,
-    },
-    {
-      id: 5,
-      title: "Smart TV",
-      description: "55-inch 4K Smart TV with streaming apps built-in.",
-      price: 699.99,
-    },
-  ];
-let sum = 0;
+// const products = [
+//     {
+//       id: 1,
+//       title: "Smartphone",
+//       description: "A high-end smartphone with the latest features.",
+//       price: 799.99,
+//     },
+//     {
+//       id: 2,
+//       title: "Laptop",
+//       description: "Powerful laptop with a large screen and fast processor.",
+//       price: 1299.99,
+//     },
+//     {
+//       id: 3,
+//       title: "Coffee Maker",
+//       description: "An automatic coffee maker with a built-in grinder.",
+//       price: 99.99,
+//     },
+//     {
+//       id: 4,
+//       title: "Headphones",
+//       description: "Wireless over-ear headphones with noise-cancellation.",
+//       price: 199.99,
+//     },
+//     {
+//       id: 5,
+//       title: "Smart TV",
+//       description: "55-inch 4K Smart TV with streaming apps built-in.",
+//       price: 699.99,
+//     },
+//   ];
+// let sum = 0;
 
 
-for (let i = 0; i < products.length; i++) {
-    sum += products[i].price; 
+// for (let i = 0; i < products.length; i++) {
+//     sum += products[i].price; 
     
-}  
+// }  
 
-let ortalama = sum / products.length;
-  console.log(sum);
-  console.log(ortalama);
+// let ortalama = sum / products.length;
+//   console.log(sum);
+//   console.log(ortalama);
   
+  // task14
+// let array = [12,34,6,13,46,98]
+// let num = +prompt("Enter num")
+
+// for (let i = 0; i < array.length; i++) {
+//   if (num == array[i]) {
+//     console.log(num);
+    
+//   }
   
+// }
+
+  // task15
+
+//   const students = [
+//     { name: "Ali", scores: [90, 85, 92] },
+//     { name: "Mammal", scores: [75, 80, 85] },
+//     { name: "Camil", scores: [90, 95, 85] },
+//     { name: "Davud", scores: [100, 100, 100] }
+//   ];
+//   let aver = [];
+//   for (let i = 0; i < students.length; i++) {
+//     let total = 0; 
+//     for (let j = 0; j < students[i].scores.length; j++) {
+//         total += students[i].scores[j]; 
+//     }
+//     let average = total / students[i].scores.length; 
+//    console.log(average);
+//    aver.push(average);
+// }
+// console.log(aver);
+
+// max = aver[0];
+
+// for (let i = 0; i < aver.length; i++) {
+//   if (max < aver[i]) {
+//     max = aver[i];
+//   }
+// }
+// console.log(max);
+
+// task16
+
+let text = prompt("Enter text");
+let txet = "";
+
+for (let i = text.length-1; i >= 0; i--) {
+  txet += text[i];
+  
+}
+console.log(txet);
+
+if (txet == text) {
+  console.log("polidromdur");
+  
+}else{
+  console.log("polid deyil");
+  
+}
