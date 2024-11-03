@@ -169,22 +169,26 @@
 
 // task7
 
-// function Medium(array) {
-//     let mid =0;
-//   for (let i = 0; i < array.length; i++) {
-//     if (i == (array.length / 2) - 1) {
-//       if (array.length % 2 === 0 ) {
-//         mid = (array[i] + array[i+1]) / 2
-        
-//       }else if(array.length % 2 === 1){
-//         mid = (array[i-1] + array[i] + array[i+1]) / 3
-//       }
-       
-//     }
-//   }
-//     return mid
-// }
-//  console.log(Medium([12,13,17,5,12,13]));
+function Medium(array) {
+    let mid =0;
+    if (array.length % 2 === 0) {  
+  for (let i = 0; i < array.length; i++) {
+    if (i == (array.length / 2) - 1) {
+      if (array.length % 2 === 0 ) {
+        mid = (array[i] + array[i+1]) / 2 
+      }
+    }
+  } 
+}else{
+    for (let i = 0; i < array.length; i++) {
+        if (i == ((array.length-1) / 2)) {
+            mid = (array[i-1] + array[i] + array[i+1]) / 3;      
+        }
+    }
+}
+    return mid
+}
+ console.log(Medium([12,13,17,5,12,13,11,2,16]));
  
 // task8
 
@@ -272,20 +276,20 @@
 
 // task12
 
-function Equal(array1,array2) {
-   isPrime = true;
-   if (array1.length !== array2.length) {
-    return false;
-   }
-    for (let i = 0; i < array1.length; i++) {
-              if (array1[i] === array2[i]) {
-                isPrime
-              }else{
-                isPrime = false;
-break;                 
-        }
+// function Equal(array1,array2) {
+//    isPrime = true;
+//    if (array1.length !== array2.length) {
+//     return false;
+//    }
+//     for (let i = 0; i < array1.length; i++) {
+//               if (array1[i] === array2[i]) {
+//                 isPrime
+//               }else{
+//                 isPrime = false;
+// break;                 
+//         }
         
-    }
-    return isPrime;
-}
-console.log(Equal([1,2,3,4,5],[1,2,3,4,5]));
+//     }
+//     return isPrime;
+// }
+// console.log(Equal([1,2,3,4,5],[1,2,3,4,5]));
