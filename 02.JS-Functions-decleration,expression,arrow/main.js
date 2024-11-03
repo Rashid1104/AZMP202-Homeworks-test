@@ -137,3 +137,155 @@
 //     return ConcatArr;
 // }
 // console.log(concat([1,2,3,4,5],[6,7,8,9,10]));
+
+// task6
+
+// function countWords(sentence) {
+//     let count = 0;
+//     for (let i = 0; i < sentence.length; i++) {
+//         if (sentence[i] !== " ") {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+// console.log(countWords("hello  my friend"));
+
+
+// arrow function
+
+// const countTexts = (sentence) => {
+//     let count = 0;
+//     for (let i = 0; i < sentence.length; i++) {
+//         if (sentence[i] !== " ") {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+// console.log(countTexts("hello  my friend"));
+
+// task7
+
+// function Medium(array) {
+//     let mid =0;
+//   for (let i = 0; i < array.length; i++) {
+//     if (i == (array.length / 2) - 1) {
+//       if (array.length % 2 === 0 ) {
+//         mid = (array[i] + array[i+1]) / 2
+        
+//       }else if(array.length % 2 === 1){
+//         mid = (array[i-1] + array[i] + array[i+1]) / 3
+//       }
+       
+//     }
+//   }
+//     return mid
+// }
+//  console.log(Medium([12,13,17,5,12,13]));
+ 
+// task8
+
+// function Repeat(array) {
+//     let arr = [];
+//     let seen = []; 
+//     for (let i = 0; i < array.length; i++) {
+//         let found = false; 
+//         for (let j = 0; j < seen.length; j++) {
+//             if (array[i] === seen[j]) {
+//                 found = true;
+//                 break;
+//             }
+//         }
+//         if (found) {
+//             let alreadyInResult = false;
+//             for (let k = 0; k < arr.length; k++) {
+//                 if (array[i] === arr[k]) {
+//                     alreadyInResult = true;
+//                     break;
+//                 }
+//             }
+//             if (!alreadyInResult) {
+//                 arr.push(array[i]);
+//             }
+//         } else {
+//             seen.push(array[i]);
+//         }
+//     }
+//     return arr;
+// }
+// console.log(Repeat([1,2,3,1,2,3]));
+
+// task9
+
+// function Sum(Text,char) {
+//     let count = 0;
+//     let sum = 1;
+//     for (let i = 0; i < Text.length; i++) {
+//         if (Text[i] !== " ") {
+//             count++;
+//         }
+        
+        
+//     }
+// sum = count + 1;
+// return sum;
+// }
+// console.log(Sum("Hello",'a'));
+
+// task10
+
+// function UpperCase(array) {
+// const arr = [];
+
+// for (let i = 0; i < array.length; i++) {
+//     let code = ''; 
+//     for (let j = 0; j < 3; j++) {
+//         if (array[i][j]) { 
+//             code += array[i][j].toUpperCase(); 
+//         }
+//     }
+//    arr.push(code); 
+// }
+// return arr
+// }
+// console.log(UpperCase(["Finland", "Denmark", "Sweden", "Norway", "Iceland"]));
+
+// task11
+
+// function UpperLower(str) {
+//     let result = ''; 
+//     for (let i = 0; i < str.length; i++) {
+//         let char = str[i];
+//         if (char === char.toUpperCase()) {
+//             result += char.toLowerCase(); 
+//         } else {
+//             result += char.toUpperCase(); 
+//         }
+//     }
+
+//     return result; 
+// }
+// console.log(UpperLower("AceIsAlive"));
+
+// task12
+
+function Equal(array1,array2) {
+   isPrime = true;
+   if (array1.length !== array2.length) {
+    return false;
+   }
+    for (let i = 0; i < array1.length; i++) {
+              if (array1[i] === array2[i]) {
+                isPrime
+              }else{
+                isPrime = false;
+break;                 
+        }
+        
+    }
+    return isPrime;
+}
+console.log(Equal([1,2,3,4,5],[1,2,3,4,5]));
