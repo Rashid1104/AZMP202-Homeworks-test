@@ -169,26 +169,26 @@
 
 // task7
 
-function Medium(array) {
-    let mid =0;
-    if (array.length % 2 === 0) {  
-  for (let i = 0; i < array.length; i++) {
-    if (i == (array.length / 2) - 1) {
-      if (array.length % 2 === 0 ) {
-        mid = (array[i] + array[i+1]) / 2 
-      }
-    }
-  } 
-}else{
-    for (let i = 0; i < array.length; i++) {
-        if (i == ((array.length-1) / 2)) {
-            mid = (array[i-1] + array[i] + array[i+1]) / 3;      
-        }
-    }
-}
-    return mid
-}
- console.log(Medium([12,13,17,5,12,13,11,2,16]));
+// function Medium(array) {
+//     let mid =0;
+//     if (array.length % 2 === 0) {  
+//   for (let i = 0; i < array.length; i++) {
+//     if (i == (array.length / 2) - 1) {
+//       if (array.length % 2 === 0 ) {
+//         mid = (array[i] + array[i+1]) / 2 
+//       }
+//     }
+//   } 
+// }else{
+//     for (let i = 0; i < array.length; i++) {
+//         if (i == ((array.length-1) / 2)) {
+//             mid = (array[i-1] + array[i] + array[i+1]) / 3;      
+//         }
+//     }
+// }
+//     return mid
+// }
+//  console.log(Medium([12,13,17,5,12,13,11,2,16]));
  
 // task8
 
@@ -224,20 +224,27 @@ function Medium(array) {
 
 // task9
 
-// function Sum(Text,char) {
-//     let count = 0;
-//     let sum = 1;
-//     for (let i = 0; i < Text.length; i++) {
-//         if (Text[i] !== " ") {
-//             count++;
-//         }
+function Sum(Text,char) {
+    let count = 0;
+    let charC = 0;
+    let sum = 0;
+    for (let i = 0; i < Text.length; i++) {
+        if (Text[i] !== " ") {
+            count++;
+        }
         
         
-//     }
-// sum = count + 1;
-// return sum;
-// }
-// console.log(Sum("Hello",'a'));
+    }
+    for (let i = 0; i < char.length; i++) {
+       if (char[i] !== " ") {
+        charC++;
+       }
+        
+    }
+sum = count + charC;
+return sum;
+}
+console.log(Sum("Hello ",'a'));
 
 // task10
 
