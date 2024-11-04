@@ -271,3 +271,6 @@ if (txet == text) {
   console.log("polid deyil");
   
 }
+
+// task10
+

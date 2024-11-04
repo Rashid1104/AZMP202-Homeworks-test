@@ -80,30 +80,30 @@
 
 // task4
 
-// function sentenceCapitalization(sentence) {
-//     let capitalizedSentence = ""; 
-//     let isPrime = true; 
+function sentenceCapitalization(sentence) {
+    let capitalizedSentence = ""; 
+    let isPrime = true; 
 
-//     for (let i = 0; i < sentence.length; i++) {
-//         const char = sentence[i];     
-//         if (char === ' ') {
-//             capitalizedSentence += char; 
-//             isPrime = true; 
-//         } else {
-//             if (isPrime) {
-//                 capitalizedSentence += char.toUpperCase();
-//                 isPrime = false; 
-//             } else {
-//                 capitalizedSentence += char; 
-//             }
-//         }
-//     }
+    for (let i = 0; i < sentence.length; i++) {
+        const char = sentence[i];     
+        if (char === ' ') {
+            capitalizedSentence += char; 
+            isPrime = true; 
+        } else {
+            if (isPrime) {
+                capitalizedSentence += char.toUpperCase();
+                isPrime = false; 
+            } else {
+                capitalizedSentence += char; 
+            }
+        }
+    }
 
-//     return capitalizedSentence; 
-// }
+    return capitalizedSentence; 
+}
 
 
-// console.log(sentenceCapitalization("a short sentence")); 
+console.log(sentenceCapitalization("a short sentence")); 
 
 // task5
 
@@ -220,31 +220,31 @@
 //     }
 //     return arr;
 // }
-// console.log(Repeat([1,2,3,1,2,3]));
+// console.log(Repeat([1,2,3,1,2,3,'a','a']));
 
 // task9
 
-function Sum(Text,char) {
-    let count = 0;
-    let charC = 0;
-    let sum = 0;
-    for (let i = 0; i < Text.length; i++) {
-        if (Text[i] !== " ") {
-            count++;
-        }
+// function Sum(Text,char) {
+//     let count = 0;
+//     let charC = 0;
+//     let sum = 0;
+//     for (let i = 0; i < Text.length; i++) {
+//         if (Text[i] !== " ") {
+//             count++;
+//         }
         
         
-    }
-    for (let i = 0; i < char.length; i++) {
-       if (char[i] !== " ") {
-        charC++;
-       }
+//     }
+//     for (let i = 0; i < char.length; i++) {
+//        if (char[i] !== " ") {
+//         charC++;
+//        }
         
-    }
-sum = count + charC;
-return sum;
-}
-console.log(Sum("Hello ",'a'));
+//     }
+// sum = count + charC;
+// return sum;
+// }
+// console.log(Sum("Hello ",'a'));
 
 // task10
 
