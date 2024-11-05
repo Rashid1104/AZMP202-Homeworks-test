@@ -101,12 +101,11 @@
 //     array.sort();
 //     console.log("Sorted companies:", array);
 
-//     // for (let i = 0; i < array.length; i++) {
-//     //     for (let j = 0; j < array[i].length; j++) {
-//     //          console.log(array[i][j].toUpperCase());          
-//     //     }
-       
-//     // }
+// let array3 = [];
+//     for (let i = 0; i < array.length; i++) {     
+//              array3.push(array[i].toUpperCase());              
+//     }
+
 //     for (let i = 0; i < array.length; i++) {
 //     if (array[i] === 'Google') {
 //         array.push('Twitter')
@@ -133,6 +132,7 @@
 //         lastThree: arr1,
 //         middleCompanies: arr2,
 //         sortedCompanies: array,
+//         upperCase: array3,
 //         addcompanies: array,
 //         MoreWithOne0:  OneO,
 //     };
