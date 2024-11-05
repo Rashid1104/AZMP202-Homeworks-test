@@ -104,13 +104,27 @@ let arr = [
 
 // 7)
 
-// const Uzunluq = arr.reduce((uzun, current,index) => {
-//     return current.name.length > uzun.name.length ? current : uzun;
-//   }, arr[0]).index;
-  
-//   console.log(Uzunluq ** 2);
-  
-//   8)
+// const SqrtIndex = arr.reduce((uzunluq,product) => {
+//   return product.name.length > uzunluq.name.length ? product : uzunluq;
+// },arr[0]) ;
+// const index = arr.indexOf(SqrtIndex)
+
+// console.log(SqrtIndex);
+// console.log(index ** 2);
+
+// 8)
+
+// Example 1
+
+// const UzunLen4 = arr.filter((Uzunluq) => Uzunluq.name.length === 4);
+// console.log(UzunLen4);
+
+// Example 2
+
+// let array = [];
+// const UzunluqLen4 = arr.filter((Uzunluq) => Uzunluq.name.length === 4);
+// array.push(UzunluqLen4)
+// console.log(array);
 
 // 9)
 
@@ -119,7 +133,7 @@ let arr = [
 
 // 10)
 
-// const con = arr.filter(item => (item.name.match(/l/g) || []).length >= 2);
+// const con = arr.filter(item => (item.name.match(/l/g) || []).length === 2);
 // console.log(con);
 
 // 11)
