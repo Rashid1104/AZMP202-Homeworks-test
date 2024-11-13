@@ -1,3 +1,20 @@
+const BackButton = document.createElement('button');
+BackButton.innerText = 'Back'
+BackButton.style.position = 'fixed';
+BackButton.style.top = '90px';
+BackButton.style.left = '20px';
+BackButton.style.backgroundColor = 'cadetblue'
+BackButton.style.border = 'none';
+BackButton.style.color = 'white';
+BackButton.style.padding = '10px';
+BackButton.style.fontSize = '1rem';
+BackButton.style.cursor = 'pointer';
+document.body.appendChild(BackButton);
+
+BackButton.onclick = () => {
+    location.href = '../task4.html'
+}
+
 const MainPart = document.createElement('div');
 MainPart.id = 'calculator';
 MainPart.className = 'calculator';

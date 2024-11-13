@@ -6,7 +6,7 @@ sidebar.style.backgroundColor = 'cadetblue';
 sidebar.style.position = 'fixed';
 sidebar.style.top = '0';
 sidebar.style.left = '-200px'; 
-sidebar.style.padding = '20px';
+// sidebar.style.padding = '20px';
 sidebar.style.boxSizing = 'border-box';
 sidebar.style.transition = 'left 0.3s ease'; 
 document.body.appendChild(sidebar);
@@ -19,66 +19,92 @@ sidebarTitle.style.fontSize = '1.5rem';
 sidebarTitle.style.marginBottom = '20px';
 sidebar.appendChild(sidebarTitle);
 
+const divA = document.createElement('div');
+divA.style.width = '200px';
+divA.style.height = '40px';
+divA.style.textAlign = 'left';
+divA.style.transition = '0.6s ease';
+sidebar.appendChild(divA);
+
 const link1 = document.createElement('a');
 link1.innerText = 'BigTexts';
 link1.href = 'task1/task1.html';
 link1.style.display = 'block';
 link1.style.width = '100%';
-link1.style.marginBottom = '15px';
+link1.style.padding = '12px 4px'
 link1.style.color = '#fff';
 link1.style.textDecoration = 'none';
 link1.style.fontSize = '1rem';
 link1.style.fontFamily = 'Arial, sans-serif';
-link1.style.transition = 'opacity 0.6s ease';
-sidebar.appendChild(link1);
+divA.appendChild(link1);
+
+const divA3 = document.createElement('div');
+divA3.style.width = '200px';
+divA3.style.height = '40px';
+divA3.style.textAlign = 'left'
+divA3.style.transition = '0.6s ease'
+sidebar.appendChild(divA3);
 
 const link3 = document.createElement('a');
 link3.innerText = 'Bootstrap';
 link3.href = 'task2/task2.html';
 link3.style.display = 'block';
-link3.style.marginBottom = '15px';
+link3.style.width = '100%';
+link3.style.padding = '12px 4px'
 link3.style.color = '#fff';
 link3.style.textDecoration = 'none';
 link3.style.fontSize = '1rem';
 link3.style.fontFamily = 'Arial, sans-serif';
-link3.style.transition = 'opacity 0.6s ease';
-sidebar.appendChild(link3);
+divA3.appendChild(link3);
+
+const divA2 = document.createElement('div');
+divA2.style.width = '200px';
+divA2.style.height = '40px';
+divA2.style.textAlign = 'left'
+divA2.style.transition = '0.6s ease'
+sidebar.appendChild(divA2);
 
 const link2 = document.createElement('a');
 link2.innerText = 'Calculator';
 link2.href = 'task3/task3.html';
 link2.style.display = 'block';
-link2.style.marginBottom = '15px';
+link2.style.width = '100%';
+link2.style.padding = '12px 4px'
 link2.style.color = '#fff';
 link2.style.textDecoration = 'none';
 link2.style.fontSize = '1rem';
 link2.style.fontFamily = 'Arial, sans-serif';
-link2.style.transition = 'opacity 0.6s ease';
-sidebar.appendChild(link2);
+divA2.appendChild(link2);
+
+const divA4 = document.createElement('div');
+divA4.style.width = '200px';
+divA4.style.height = '40px';
+divA4.style.textAlign = 'left'
+divA4.style.transition = '0.6s ease'
+sidebar.appendChild(divA4);
 
 const link4 = document.createElement('a');
 link4.innerText = 'Sidebar';
 link4.href = 'task4.html';
 link4.style.display = 'block';
-link4.style.marginBottom = '15px';
+link4.style.padding = '12px 4px'
 link4.style.color = '#fff';
 link4.style.textDecoration = 'none';
 link4.style.fontSize = '1rem';
 link4.style.fontFamily = 'Arial, sans-serif';
-link4.style.transition = 'opacity 0.6s ease';
-sidebar.appendChild(link4);
+divA4.appendChild(link4);
 
-link1.onmouseover = () => link1.style.opacity = '0.6'
-link1.onmouseout = () => link1.style.opacity = '1'
+divA.onmouseover = () => divA.style.backgroundColor = '#52898b'
+divA.onmouseout = () => divA.style.backgroundColor = 'cadetblue'
 
-link2.onmouseover = () => link2.style.opacity = '0.6'
-link2.onmouseout = () => link2.style.opacity = '1'
+divA2.onmouseover = () => divA2.style.backgroundColor = '#52898b'
+divA2.onmouseout = () => divA2.style.backgroundColor = 'cadetblue'
 
-link3.onmouseover = () => link3.style.opacity = '0.6'
-link3.onmouseout = () => link3.style.opacity = '1'
+divA3.onmouseover = () => divA3.style.backgroundColor = '#52898b'
+divA3.onmouseout = () => divA3.style.backgroundColor = 'cadetblue'
 
-link4.onmouseover = () => link4.style.opacity = '0.6'
-link4.onmouseout = () => link4.style.opacity = '1'
+divA4.onmouseover = () => divA4.style.backgroundColor = '#52898b'
+divA4.onmouseout = () => divA4.style.backgroundColor = 'cadetblue'
 
 const mainContent = document.createElement('div');
 mainContent.id = 'main-content';
@@ -109,7 +135,7 @@ closeButton.style.right = '10px';
 closeButton.style.fontSize = '0.6rem';
 closeButton.style.background = 'none';
 closeButton.style.border = 'none';
-closeButton.style.color = '#333';
+closeButton.style.color = '#fff';
 closeButton.style.cursor = 'pointer';
 sidebar.appendChild(closeButton);
 

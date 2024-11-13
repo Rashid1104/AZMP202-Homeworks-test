@@ -1,14 +1,14 @@
 const App = document.createElement('div');
 App.id = 'app';
-App.className = 'container'
+App.className = 'container';
 document.body.appendChild(App);
 
 const Main = document.createElement('div');
 Main.className = 'main'
 const İmgMain = document.createElement('img');
 İmgMain.src = 'img/main2.png'
-İmgMain.width = '1060'
-İmgMain.height = '360'
+İmgMain.width = '1080'
+İmgMain.height = '310'
 
 Main.appendChild(İmgMain);
 App.appendChild(Main);
@@ -32,20 +32,25 @@ ImgCols.width = '310'
 ImgCols.height = '180'
 divcols.appendChild(ImgCols);
 
+const AllTexts = document.createElement('div');
+AllTexts.style.padding = '20px'
+cols.appendChild(AllTexts);
+
 const title = document.createElement('h6');
 title.className = 'text-muted';
 title.textContent = 'Indonecetus facilis';
-cols.appendChild(title);
+AllTexts.appendChild(title);
 
 const description = document.createElement('p');
 description.className = 'text-muted';
 description.textContent = 'Nullam ac nisi dui. Ipsum consectetue lobortis non euisque morbi penatis dapibus urna.';
-cols.appendChild(description);
+AllTexts.appendChild(description);
 
 const readMore = document.createElement('a');
 readMore.href = '#';
 readMore.className = 'text-warning';
 readMore.textContent = 'Read More »';
-cols.appendChild(readMore);
+readMore.style.textAlign = 'center';
+AllTexts.appendChild(readMore);
 }
 
