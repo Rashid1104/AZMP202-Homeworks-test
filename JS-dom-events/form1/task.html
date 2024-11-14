@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Add Form</h1>
+    <form id="productForm">
+        <label>Title</label>
+        <input type="text" id="title" placeholder="title" required>
+        
+        <label>Price</label>
+        <input type="number" id="price" placeholder="price" required>
+        
+        <label>Description</label>
+        <input type="text" id="description" placeholder="description" required>
+        
+        <label>Image</label>
+        <input type="text" id="image" placeholder="image" required>
+        
+        <button type="button" id="addButton">Add</button>
+    </form>
+
+    <h2>Products</h2>
+    <div id="productsContainer"></div>
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <div class="warning-icon">&#10060;</div> 
+            <p>Are you sure?</p>
+            <p>You won't be able to revert this!</p>
+            <button id="confirmDelete" class="modal-delete-button">Yes, delete it!</button>
+            <button id="cancelDelete" class="modal-cancel-button">Cancel</button>
+        </div>
+    </div>
+    
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">&#10004;</div> 
+            <p>Deleted successfully</p>
+            <button id="closeSuccessModal" class="modal-ok-button">OK</button>
+        </div>
+    </div>
+    
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="animatedCloseButton" class="close-button">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+            </div>
+            <h2>Oops... </h2>
+            <p>Inputları tam doldurun</p>
+            <button id="okButton">OK</button>
+            <div class="a">
+                <a href="#" >Why do i have this issue?</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
