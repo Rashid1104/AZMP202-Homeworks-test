@@ -381,8 +381,7 @@ h2{
 
 #closeDetailsModal:hover {
     background-color: #0056b3;
-}
-    `;
+}`;
 document.head.appendChild(style);
 
 import { products as initialProducts } from './products.js';
