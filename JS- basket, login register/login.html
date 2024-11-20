@@ -11,12 +11,12 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #f4f4f9;
+      background-color: #F2F2F2;
     }
     .form-container {
-      width: 300px;
+      width: 360px;
       background: white;
-      padding: 20px;
+      padding: 20px 40px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -24,14 +24,21 @@
       text-align: center;
     }
     input {
-      width: 100%;
+      width: 90%;
       padding: 10px;
       margin: 10px 0;
-      border: 1px solid #ccc;
+      background-color: white;
+      /* border: 1px solid #ccc; */
+      border: none;
+      border-bottom: 2.5px solid #EEEEEE;
       border-radius: 5px;
     }
+    .welcome{
+      font-size: 2.5rem;
+      padding-bottom: 100px;
+    }
     button {
-      width: 100%;
+      width: 85%;
       padding: 10px;
       background: #007bff;
       color: white;
@@ -43,21 +50,35 @@
       background: #0056b3;
     }
     .a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      left: 47.8%;
+      top: 27%;
       width: 60px;
       height: 60px;
       background-color: black;
-      text-align: center;
+      border-radius: 5px;
+      /* text-align: center; */
     }
     .a h2{
      font-size: 2rem;
      color: white;
     }
     .link {
-      display: block;
+      /* display: block; */
       text-align: center;
-      margin: 10px 0;
       text-decoration: none;
       color: #007bff;
+    }
+    .text {
+      /* display: block; */
+      text-align: center;
+      padding-top: 80px;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #000000;
     }
     .link:hover {
       text-decoration: underline;
@@ -66,14 +87,15 @@
 </head>
 <body>
   <div class="form-container">
-    <h2>Welcome</h2>
+    <h2 class="welcome">Welcome</h2>
     <div class="a">
      <h2>A</h2>
     </div>
-    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+    <input type="email" id="loginEmail" placeholder="Email" required>
     <input type="password" id="loginPassword" placeholder="Password" required>
-    <a href="./register.html" class="link">Don't have an account? Register</a>
-    <button onclick="login()">Submit</button>
+    <button onclick="login()">Login</button>
+    <p class="text">Not a Member? <a href="./register.html" class="link" >Sign</a></p>
+  
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
