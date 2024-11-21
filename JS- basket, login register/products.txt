@@ -1,0 +1,78 @@
+ const productsData = [
+    {
+      name: "Sony WH-1000XM5",
+      img: "img/headphones1.png",
+      description: "Noise Cancelling Over-Ear Wireless Headphones",
+      price: 349.99,
+    },
+    {
+      name: "Bose QuietComfort 45",
+      img: "img/headphones2.png",
+      description: "Premium Noise Cancelling Headphones for Clear Sound",
+      price: 329.99,
+    },
+  
+    {
+      name: "Samsung 1.9 cu. ft. Microwave Oven",
+      img: "img/microwave1.png",
+      description: "Over-the-Range Microwave with 1000W Power",
+      price: 199.99,
+    },
+    {
+      name: "LG Smart Microwave",
+      img: "img/microwave2.png",
+      description: "Smart Inverter Microwave with Easy Clean",
+      price: 249.99,
+    },
+  
+    {
+      name: "iPhone 15 Pro Max",
+      img: "img/phone1.png",
+      description: "Apple's Latest Flagship Smartphone with A17 Chip",
+      price: 1099.99,
+    },
+    {
+      name: "Samsung Galaxy S23 Ultra",
+      img: "img/phone2.png",
+      description: "High-end Android Phone with 200MP Camera",
+      price: 1199.99,
+    },
+ 
+    {
+      name: "Apple iPad Pro 12.9-inch",
+      img: "img/plashet1.png",
+      description: "Powerful Tablet with M2 Chip and Liquid Retina Display",
+      price: 1099.00,
+    },
+    {
+      name: "Samsung Galaxy Tab S8 Ultra",
+      img: "img/plashet2.png",
+      description: "Ultra-Large Screen Android Tablet with S Pen Support",
+      price: 1049.00,
+    },
+
+  ];
+
+    function renderProducts() {
+    const container = document.getElementById("basketContainer");
+        container.innerHTML = ""; 
+
+    productsData.forEach((products) => {
+      const product = document.createElement("div");
+      product.className = "product";
+      product.innerHTML = `
+       <img src="${products.img}" alt="" class = "images">
+      <h3 class = "name">${products.name}</h3>
+      <p class = "desc">${products.description}</p>
+      <p class="price">price: $ ${products.price.toFixed(2)}</p>
+      <div class = "btns">
+     <button class = "cart-btn"><i class="fa-solid fa-cart-shopping" style="color: #FFD43B;"></i></button>
+     <button class = "heart-btn"><i class="fa-regular fa-heart" style="color: #ff0000;"></i></button>
+     <button class = "info-btn"><i class="fa-solid fa-circle-info" style="color: #74C0FC;"></i></button>
+      </div>
+    `;
+    container.appendChild(product);
+    })
+  }
+
+  renderProducts();
