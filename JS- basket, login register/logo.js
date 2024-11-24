@@ -6,7 +6,7 @@ const carsData = [
       fuel: "90L",
       transmission: "Manual",
       passengers: "2 People",
-      price: 99.000,
+      price: 99.00,
     },
     {
       name: "Nissan GT-R",
@@ -15,7 +15,7 @@ const carsData = [
       fuel: "80L",
       transmission: "Manual",
       passengers: "2 People",
-      price: 80.000,
+      price: 80.00,
     },
     {
       name: "Rolls-Royce",
@@ -24,7 +24,7 @@ const carsData = [
       fuel: "70L",
       transmission: "Manual",
       passengers: "4 People",
-      price: 96.000,
+      price: 96.00,
     },
     {
       name: "Nissan GT-R",
@@ -33,7 +33,7 @@ const carsData = [
       fuel: "80L",
       transmission: "Manual",
       passengers: "2 People",
-      price: 80.000,
+      price: 80.00,
       discount: "$100.00",
     
     },
@@ -44,7 +44,7 @@ const carsData = [
       fuel: "70L",
       transmission: "Manual",
       passengers: "6 People",
-      price: 72.000,
+      price: 72.00,
       discount: "$80.00",
     },
     {
@@ -54,7 +54,7 @@ const carsData = [
       fuel: "80L",
       transmission: "Manual",
       passengers: "6 People",
-      price: 80.000,
+      price: 80.00,
     },
     {
       name: "All New Terios",
@@ -63,7 +63,7 @@ const carsData = [
       fuel: "90L",
       transmission: "Manual",
       passengers: "6 People",
-      price: 74.000,
+      price: 74.00,
     },
     {
       name: "CR-V",
@@ -72,41 +72,275 @@ const carsData = [
       fuel: "80L",
       transmission: "Manual",
       passengers: "6 People",
-      price: 80.000,
+      price: 80.00,
+    },
+    {
+      name: "Koenigsegg",
+      img: "img/car1.png",
+      type: "Sport",
+      fuel: "90L",
+      transmission: "Manual",
+      passengers: "2 People",
+      price: 99.00,
+    },
+    {
+      name: "Nissan GT-R",
+      img: "img/car1.png",
+      type: "Sport",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "2 People",
+      price: 80.00,
+    },
+    {
+      name: "Rolls-Royce",
+      img: "img/car1.png",
+      type: "Sedan",
+      fuel: "70L",
+      transmission: "Manual",
+      passengers: "4 People",
+      price: 96.00,
+    },
+    {
+      name: "Nissan GT-R",
+      img: "img/car1.png",
+      type: "Sport",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "2 People",
+      price: 80.00,
+      discount: "$100.00",
+    
+    },
+    {
+      name: "All New Rush",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "70L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 72.00,
+      discount: "$80.00",
+    },
+    {
+      name: "CR-V",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 80.00,
+    },
+    {
+      name: "All New Terios",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "90L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 74.00,
+    },
+    {
+      name: "CR-V",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 80.00,
+    },
+    {
+      name: "Koenigsegg",
+      img: "img/car1.png",
+      type: "Sport",
+      fuel: "90L",
+      transmission: "Manual",
+      passengers: "2 People",
+      price: 99.00,
+    },
+    {
+      name: "Nissan GT-R",
+      img: "img/car1.png",
+      type: "Sport",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "2 People",
+      price: 80.00,
+    },
+    {
+      name: "Rolls-Royce",
+      img: "img/car1.png",
+      type: "Sedan",
+      fuel: "70L",
+      transmission: "Manual",
+      passengers: "4 People",
+      price: 96.00,
+    },
+    {
+      name: "Nissan GT-R",
+      img: "img/car1.png",
+      type: "Sport",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "2 People",
+      price: 80.00,
+      discount: "$100.00",
+    
+    },
+    {
+      name: "All New Rush",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "70L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 72.00,
+      discount: "$80.00",
+    },
+    {
+      name: "CR-V",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 80.00,
+    },
+    {
+      name: "All New Terios",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "90L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 74.00,
+    },
+    {
+      name: "CR-V",
+      img: "img/car1.png",
+      type: "SUV",
+      fuel: "80L",
+      transmission: "Manual",
+      passengers: "6 People",
+      price: 80.00,
     },
   ];
+  const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
 
+  let currentIndex = 0;
+  const itemsPerPage = 8;
+  const itemsPerLoadMore = 4;
+  
   function renderCards() {
     const container = document.getElementById("basketContainer");
-    container.innerHTML = ""; 
-  
-    carsData.forEach((car) => {
+    const itemsToShow = carsData.slice(0, currentIndex);
+    container.innerHTML = "";
+    itemsToShow.forEach((car) => {
       const card = document.createElement("div");
       card.className = "card";
-  
-    
       card.innerHTML = `
-        <h3>${car.name}</h3>
-        <p>${car.type}</p>
- <img src="${car.img}" alt="" class = "images">
- <div class= "elem">
-        <p><i class="fa-solid fa-gas-pump"></i> ${car.fuel}</p>
-        <p><i class="fa-regular fa-circle-dot"></i> Manual</p>
-        <p><i class="fa-solid fa-user"></i> ${car.passengers}</p>
+        <div class="text-icon">
+          <div>
+            <h3>${car.name}</h3>
+            <p>${car.type}</p><br>
+          </div>
+          <button class="heart-btn">
+            <i class="fa-regular fa-heart" style="color: #ff0000;"></i>
+          </button>
         </div>
-        <p class="price">price: $ ${car.price.toFixed(3)}</p>
-        <div class = "btns">
-       <button class = "cart-btn"><i class="fa-solid fa-cart-shopping" style="color: #FFD43B;"></i></button>
-       <button class = "heart-btn"><i class="fa-regular fa-heart" style="color: #ff0000;"></i></button>
-       <button class = "info-btn"><i class="fa-solid fa-circle-info" style="color: #74C0FC;"></i></button>
+        <img src="${car.img}" alt="" class="images">
+        <div class="elem">
+          <p><i class="fa-solid fa-gas-pump"></i> ${car.fuel}</p>
+          <p><i class="fa-regular fa-circle-dot"></i> Manual</p>
+          <p><i class="fa-solid fa-user"></i> ${car.passengers}</p>
+        </div>
+        <div class="Price-btn">
+          <p class="price p">$${car.price.toFixed(2)} <span class="span">/ day</span></p>
+          <button class="Rent-now">Rent Now</button>
         </div>
       `;
       container.appendChild(card);
     });
+    const showMoreButton = document.getElementById("Show-More-Car");
+    if (currentIndex >= carsData.length) {
+      showMoreButton.style.display = "none";
+    }
   }
- 
-  renderCards();
+  
+  function showMoreCards() {
+    currentIndex += itemsPerLoadMore;
+    renderCards();
+  }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    currentIndex = itemsPerPage;
+    renderCards();
+    const ShowMoreCar = document.getElementById('Show-More-Car');
+    ShowMoreCar.addEventListener('click', () => {
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "Do you want to load more cars?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, load more!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          showMoreCards();
+          Swal.fire({
+            title: 'Loaded!',
+            text: 'More cars have been displayed.',
+            icon: 'success',
+            confirmButtonColor: '#3085d6'
+          });
+        }
+      });
+    });
+  });  
+ renderCards();
+  
 
+// function searchCars(query) {
+//     const filteredData = carsData.filter((car) => {
+//       return car.name.toLowerCase().includes(query.toLowerCase());
+//     });
+//     renderCards(filteredData);
+//   }
+//   searchInput.addEventListener("input", () => {
+//     const query = searchInput.value.trim();
+//     searchCars(query);
+//   });
+
+  // container.addEventListener("click", (event) => {
+  //   if (event.target.classList.contains("Rent-now")) {
+  //     const cardElement = event.target.closest(".card");
+  //     const carName = cardElement.querySelector("h3").textContent;
+
+  //     Swal.fire({
+  //       title: "Are you sure?",
+  //       text: `Do you really want to rent the ${carName}?`,
+  //       icon: "warning",
+  //       showCancelButton: true,
+  //       confirmButtonColor: "#3085d6",
+  //       cancelButtonColor: "#d33",
+  //       confirmButtonText: "Yes, rent this car!",
+  //     }).then((result) => {
+  //       if (result.isConfirmed) {
+  //         Swal.fire({
+  //           title: "Success!",
+  //           text: `You have rented the ${carName} successfully.`,
+  //           icon: "success",
+  //           confirmButtonText: "OK",
+  //         });
+  //       }
+  //     });
+  //   }
+  // });
+
+ 
+ 
   document.addEventListener("DOMContentLoaded", () => {
     const sayinElement = document.querySelector(".sayin");
 
@@ -155,14 +389,18 @@ image.style.justifyContent = 'center';
 image.style.alignItems = 'center';
 sidebar.appendChild(image);
 
-function createMenuItem(text, href) {
+const Logoutbtn = document.createElement('button');
+
+function createMenuItem(text, href, action) {
   const div = document.createElement('div');
   div.style.width = '200px';
   div.style.height = '40px';
   div.style.textAlign = 'left';
   div.style.transition = '0.6s ease';
 
+
   const link = document.createElement('a');
+  link.id = text.toLowerCase();
   link.id = text;
   link.innerText = text;
   link.href = href;
@@ -172,6 +410,7 @@ function createMenuItem(text, href) {
   link.style.textDecoration = 'none';
   link.style.fontSize = '1rem';
   link.style.fontFamily = 'Arial, sans-serif';
+  if (action) link.setAttribute('data-action', action);
 
   div.appendChild(link);
   div.onmouseover = () => (div.style.backgroundColor = 'rgb(1, 1, 119)');
@@ -181,13 +420,14 @@ function createMenuItem(text, href) {
 }
 
 createMenuItem('Products', 'product.html');
-createMenuItem('login', 'login.html');
-createMenuItem('registration', 'register.html');
-createMenuItem('logout', '#');
+createMenuItem('login', 'login.html','login');
+createMenuItem('registration', 'register.html','registration');
+createMenuItem('logout', '#','logout');
 
-document.getElementById('logout').addEventListener('click', (event) => {
-  event.preventDefault(); 
-  const action = event.target.dataset.action;
+document.querySelectorAll('[data-action]').forEach((menuItem) => {
+  menuItem.addEventListener('click', (event) => {
+    event.preventDefault();
+    const action = event.target.dataset.action;
 
   if (action === 'logout') {
       Swal.fire({
@@ -200,16 +440,21 @@ document.getElementById('logout').addEventListener('click', (event) => {
           confirmButtonText: 'Yes, log out!'
       }).then((result) => {
           if (result.isConfirmed) {
-              Swal.fire(
-                  'Logged Out',
-                  'You have been logged out successfully.',
-                  'success'
-              );
+            Swal.fire({
+              title: 'Logged Out',
+              text: 'You have been logged out successfully.',
+              icon: 'success',
+               confirmButtonText: 'OK',
+          }).then(() => {
+              location.href = "login.html"
+          })
+             
           }
       });
   } else if (action === 'login' || action === 'registration') {
       window.location.href = event.target.href;
   }
+});
 });
 
 const closeButton = document.createElement('button');
@@ -238,3 +483,15 @@ closeButton.onclick = () => {
   sidebarVisible = false;
   sidebar.style.right = '-200px';
 };
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBtn = document.querySelector('.search-Btn');
+  let isScrolling;
+
+  window.addEventListener('scroll', () => {
+      searchBtn.classList.add('hidden'); 
+      clearTimeout(isScrolling); 
+      isScrolling = setTimeout(() => {
+          searchBtn.classList.remove('hidden'); 
+      }, 600); 
+  });
+});

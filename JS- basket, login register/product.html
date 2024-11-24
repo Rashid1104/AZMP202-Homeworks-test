@@ -3,205 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Rental</title>
+    <title>Product CRUD</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 8px; 
+            text-align: left; }
+        th { background-color: #000000; color: #fff;}
+        td { background-color: #000000; color: #fff;}
+        img{
+            width: 100px;
         }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F6F7F9;
-            ;
-        }
-
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #2b6eff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .headH2 {
-            font-size: 2rem;
-            color: #ffffff;
-        }
-
-       
-
-        .right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1rem;
-            color: #333333;
-            cursor: pointer;
-            background-color: white;
-            border: none;
-        }
-
-        .img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-            object-fit: cover;
-            cursor: pointer;
-        }
-        .P{
-            height: 84px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .Popular-car{
-            font-size: 1rem;
-            color: #90A3BF;
-            padding-left: 20px;
-
-        }
-        .View-All{
-            font-size: 1rem;
-            color: #3563E9;
-            padding-right: 40px;
-
-        }
-        .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
+        .buttons { display: flex; gap: 10px; }
+        .heart-btn{
+        width: 52px;
+        height: 52px;
+        background-color:  #000000;
+        font-size: 30px;
+        border: none;
     }
-    .card {
-      width: 260px;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      padding: 20px;
+    .btn{
+        width: 90%;
+      padding: 10px;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; 
     }
-    .card h3 {
-      color: #000000;
-      margin-bottom: 10px;
+    .delete-btn{
+      background: #ff0d0d;
     }
-    .card p {
-      margin: 5px 0;
-      font-size: 14px;
-      color: #555;
+    .Edit-btn{
+      background: #0dff56;
     }
-    .card .price {
-      font-weight: bold;
-      color: #28a745;
-      margin-top: 10px;
+    .details-btn{
+      background: #106efc;
     }
-    .elem{
-        gap: 10px;
+  #description{
+        width: 300px;
+        height: 30px;
+    }
+    #price{
+        width: 60px;
+    }
+    #showMoreBtn{
+        width: 25%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+    #back-btn{
+        width: 12%;
+      padding: 10px;
+      background: #007bff;
+      font-size: 20px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .all-side{
+      width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
     }
-    .btns{
-        gap: 10px;
-        display: flex;
-        justify-content: center;
+    .right-side img{
+        width: 200px;
+        height: 200px;
     }
-    .btns button{
-        width: 32px;
-        height: 32px;
-        border-radius: 5px;
-        font-size: 15px;
+    .p-text{
+        font-size: 1rem;
     }
-    .cart-btn{
-        border-color: #FFD43B;
+    .price-text{
+        font-size: 1rem;
     }
-    .heart-btn{
-        border-color:  #ff0000;
+    .h2-text{
+        font-size: 3rem;
     }
-    .heart-btnn:hover{
-        background-color:  #ff0000;
-        border-color: #ffffff;
+    .Product-table{
+        text-align: center;
     }
-    .heart-btn:hover a{
-        color: white;
-    }
-    .images{
-        max-width: 250px;
-    }
-    .right p{
-         display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 4.6%;
-            left: 82.5%;
-    }
-    .desc{
-        font-size: 10.5px;
-    }
-    .name{
-        font-size: 14px;
-    }
-    .heart{
-    }
-    .span{
-        color: black;
-        opacity: 0.5;
-    }
-    .sayin {
-  background-color: red;
-  color: white;
-  font-size: 9px;
-  font-weight: bold;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-    </style>  
+    </style>
 </head>
 <body>
-    <header id="header">
-        <div class="left">
-            <h2 class="headH2">Login</h2>
-        </div>
-        <div class="right">
-            <ul>
-                <li><a href="./logo.html">logo</a></li>
-                <li>balance</li>
-               <section>${name}</section>
-                <select id="language-selector">
-                    <option value="en">English</option>
-                    <option value="ru">Русский</option>
-                </select>
-            </ul>
-        </div>
-    </header>
-<div class="container" id="basketContainer">
-  </div>
+    <ul>
+        <li><a href="fav.html"> favorite products</a></li>
+    </ul>
+    <button id="back-btn">back</button>
+    <h1 class="Product-table">Products Table</h1>
+    <input type="text" id="searchInput" placeholder="Search by title...">
+    <select id="sortSelect">
+        <option value="title-asc">Sort By Title Asc</option>
+        <option value="title-desc">Sort By Title Desc</option>
+        <option value="price-asc">Sort By Price Asc</option>
+        <option value="price-desc">Sort By Price Desc</option>
+    </select>
+    <button onclick="resetTable()">Back to Default</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Favs</th>
+                <th>DETAILS</th>
+                <th>EDIT</th> 
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody"></tbody>
+    </table>
+    <button id="showMoreBtn">Show More</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./product.js"></script>
 </body>
 </html>
+
