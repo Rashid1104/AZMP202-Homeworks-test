@@ -1,0 +1,8 @@
+.header-part{
+    width: 100%;
+    height: 80px;
+    border-color: rgba(0, 73, 0, 0.992,0.7);
+}
+.header-text{
+    font-size: 2rem;
+}
