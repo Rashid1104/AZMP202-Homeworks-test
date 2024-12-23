@@ -1,22 +1,33 @@
-import React from 'react'
-import Form from '../form'
-import { useState } from "react";
+import React from 'react';
+import Swal from 'sweetalert2'; 
+import './index.css';
 
-const Register = () => {
-    const [register, setregister] = useState([])
+const SignUp = () => {
+  const register = () => {
+    Swal.fire({
+      title: 'Sign Up Successful!',
+      text: 'Welcome to our platform.',
+      icon: 'success', 
+      confirmButtonText: 'Cool' 
+    });
+  };
+
   return (
-    <div>
-        <Form register={register} setregister={setregister}/>
-        <h3>Users List:</h3>
-      <ul>
-        {register.map((user) => (
-          <li key={user.id} style={{listStyleType: "none"}}>
-            {user.email}  {user.password}
-          </li>
-        ))}
-      </ul>
+    <div className="form-container">
+      <h2>Sign Up</h2>
+      <p>
+        Already a member? <a href="/login">Log In</a>
+      </p>
+      <input type="email" id="InputEmail1" placeholder="Email" required />
+      <input type="password" id="InputPassword1" placeholder="Password" required />
+      <button onClick={register}>Sign Up</button>
+      <div className="divider">or sign up with</div>
+      <div className="social-login">
+        <i className="fa-brands fa-square-facebook icon" style={{ color: '#74C0FC' }}></i>
+        <i className="fa-brands fa-google icon" style={{ color: '#ff1900' }}></i>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default SignUp;
