@@ -66,6 +66,9 @@ const ProductCard = ({ product }) => {
             onClick={() => handleGetDetails(product.id)}
           />
         </span>
+        <span>
+          
+        </span>
       </div>
       <button className={styles.button} disabled={product.stock === 0}>
         {product.stock > 0 ? "Add to Cart" : "Out of Stock"}
