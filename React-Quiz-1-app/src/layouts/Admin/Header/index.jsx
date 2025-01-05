@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 const AdminHeader = () => {
   return (
     <header>
-      <div className="container">
+      <div className={styles["container"]}>
         <div className={styles["header"]}>
           <h2 className={styles["logo"]}>Admin Logo</h2>
           <nav>

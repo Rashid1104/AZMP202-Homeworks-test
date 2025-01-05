@@ -3,12 +3,18 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import {BasketContext} from "../src/context/BasketContext"
+import  FavoriteProductsProv from "../src/context/FavoriteProducts"
 
 createRoot(document.getElementById("root")).render(
-  <HelmetProvider>
-    <BrowserRouter>
+  <HelmetProvider> 
+       <BrowserRouter>
+       <BasketContext>
+          <FavoriteProductsProv>
       <App />
-    </BrowserRouter>
+      </FavoriteProductsProv> 
+       </BasketContext>         
+    </BrowserRouter>    
   </HelmetProvider>
 );
 

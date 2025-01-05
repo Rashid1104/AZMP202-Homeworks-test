@@ -1,7 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./index.module.scss";
+import { useContext } from "react";
+import { FavContext } from "../../../context/FavoriteProducts";
+
 const Header = () => {
+  const { favproducts } = useContext(FavContext);
+
   return (
     <header>
       <div className="container">
@@ -18,6 +23,11 @@ const Header = () => {
               <li>
                 <NavLink to={"/products"}>Products</NavLink>
               </li>
+              <li>
+                <NavLink to={"/favorites"}>
+                  Favorites<sup>{favproducts.length}</sup>
+                </NavLink>
+              </li>
             </ul>
           </nav>
         </div>
@@ -27,3 +37,4 @@ const Header = () => {
 };
 
 export default Header;
+
