@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import controller from "../../../services/index";
-import { use } from "express/lib/router";
 
 const Details = () => {
   const { id } = useParams();
