@@ -71,7 +71,7 @@ app.get("/fakeApiData", (req, res) => {
 app.get("/fakeApiData/:id", (req,res) =>{
   const {id} = req.params;
 
-  const fakeApiData = fakeApiData.findIndex((p)=> p.id === +id)
+  const fakeApiData = fakeApiData.findIndex((p)=> p.id === +id || p.id === id)
 
   if (fakeApiData !== undefined) {
     res.status(200).send({
@@ -122,7 +122,7 @@ app.put("/fakeApiData/:id", (req,res)=>{
   const { id } = req.params;
   const {description, title,category,price} = req.body;
  
-  const index = data.findIndex((p) => p.id === +id);
+  const index = fakeApiData.findIndex((p) => p.id === +id || p.id === id);
 
   if (index !== -1) {
     const UpdatedfakeApiData = {
@@ -146,7 +146,7 @@ app.put("/fakeApiData/:id", (req,res)=>{
  app.get("/fakeApiData/details/:id",(req,res)=>{
   const {id} = req.params;
 
-  const FAD = fakeApiData.find((p) => p.id === +id)
+  const FAD = fakeApiData.find((p) => p.id === +id || p.id === id)
 
   if (FAD) {
     res.status(200).send({
