@@ -2,12 +2,12 @@
   "products": [
     {
       "id": "1",
-      "title": "Wild West Hoodie",
+      "title": "Jacket",
       "image": "https://preview.colorlib.com/theme/selling/images/model_1_bg.jpg.webp",
       "rating": 5,
       "reviews": 29,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
-      "price": 29.99
+      "price": 34
     },
     {
       "id": "2",
@@ -46,7 +46,7 @@
       "price": 29.99
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Wild West Hoodie",
       "image": "https://preview.colorlib.com/theme/selling/images/product_1_bg.jpg.webp",
       "rating": 5,
