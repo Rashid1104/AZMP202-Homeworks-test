@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const Details = () => {
   const { id } = useParams(); 
-  const [products, setProducts] = useState(null);
+  const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   const DB_URL = "http://localhost:8080";
 
@@ -11,7 +12,8 @@ const Details = () => {
     try {
       setLoading(true);
       const res = await axios.get(`${DB_URL}/products/${id}`);
-      setProducts(res.data.products);
+      setProduct(res.data);
+
     } catch (error) {
       console.log(error);
     } finally {
@@ -22,29 +24,24 @@ const Details = () => {
   useEffect(() => {
     getProductDetails();
   }, [id]);
+
   return (
     <div className="container my-5">
-    {loading ? (
-      <div className="text-center">
-        <div className="spinner-border text-primary" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </div>
-    ) : (
-      product && (
-        <div className="card">
-          <img src={product.imageUrl} className="card-img-top" alt={product.title} />
-          <div className="card-body">
-            <h5 className="card-title">{product.title}</h5>
-            <p className="card-text">{product.description}</p>
-            <p><strong>Price:</strong> ${product.price}</p>
-            <p><strong>Country:</strong> {product.country}</p>
+      <div className="card">
+            <img 
+              src={product.imageUrl} 
+              className="card-img-top" 
+              alt={product.title} 
+            />
+            <div className="card-body">
+              <h5 className="card-title">{product.title}</h5>
+              <p className="card-text">{product.description}</p>
+              <p><strong>Price:</strong> ${product.price}</p>
+              <p><strong>Country:</strong>{product.country}</p>
+            </div>
           </div>
-        </div>
-      )
-    )}
-  </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Details
+export default Details;

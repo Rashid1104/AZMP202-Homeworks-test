@@ -24,9 +24,8 @@ function App() {
       
       <Route path='/' element={<ClientLayout />}>
       <Route index element= {<Home />}/>
-      <Route path ="products" element= {<Products />}>
-      <Route path =":id" element= {<Details/>}/>
-      </Route>
+      <Route path ="products" element= {<Products />}/>
+      <Route path ="Details/:id" element= {<Details/>}/>
         <Route path ="basket" element= {<Basket/>}/>
         <Route path ="favorites" element= {<Favorites />}/>
       </Route>

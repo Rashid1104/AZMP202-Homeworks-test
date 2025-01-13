@@ -2,11 +2,20 @@ import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import "./index.css";
+import * as Yup from 'yup';
+// import './index.css';
 
 const AddProduct = () => {
   const navigate = useNavigate();
   const DB_URL = "http://localhost:8080";
+
+  const validationSchema = Yup.object({
+    title: Yup.string().required('Title is required'),
+    imageUrl: Yup.string().url('Invalid URL').required('Image URL is required'),
+    price: Yup.number().positive('Price must be a positive number').required('Price is required'),
+    description: Yup.string().required('Description is required'),
+    country: Yup.string().required('Country is required'),
+  });
 
   const handleFormSubmit = async (values, { resetForm }) => {
     try {
@@ -18,10 +27,7 @@ const AddProduct = () => {
         country: values.country,
       };
 
-      console.log('Sending product data:', productData);
-
-      const responsive = await axios.post(`${DB_URL}/products`, productData);
-      
+      const response = await axios.post(`${DB_URL}/products`, productData);
       navigate('/admin/TableProducts');
       resetForm();
     } catch (error) {
@@ -40,6 +46,7 @@ const AddProduct = () => {
           description: "",
           country: "",
         }}
+        validationSchema={validationSchema}
         onSubmit={handleFormSubmit}
       >
         {({ values, handleChange }) => (
@@ -83,3 +90,4 @@ const AddProduct = () => {
 };
 
 export default AddProduct;
+

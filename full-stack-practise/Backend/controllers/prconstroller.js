@@ -45,9 +45,9 @@ const getProductById = async (req, res) => {
     }
 }
 const AddProduct = async (req, res) => {
-    const {title,description,price,category} = req.body
+    const {title,description,price} = req.body
 
-    if (!title || !description || !price || !category) {
+    if (!title || !description || !price) {
        return res.status(400).json({
         message: "Bad Request! All fileds should be add!"
         })

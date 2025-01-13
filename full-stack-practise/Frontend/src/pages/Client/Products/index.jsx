@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Products/index.css"
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Swal from "sweetalert2";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [basket, setBasket] = useState([]);
-  const navigate = useNavigate();
   const DB_URL = "http://localhost:8080";
 
 
@@ -23,10 +22,6 @@ const Products = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  const handleViewDetails = (id) => {
-    navigate(`/products/details/${id}`);
   };
 
   useEffect(() => {
@@ -99,9 +94,7 @@ const Products = () => {
                    <button
                     onClick={() => handleAddToCart(product)}
                    >Add to Cart</button>
-                   <button
-                    onClick={() => handleViewDetails(product._id)}
-                   >Wiew Details</button>
+                   <button><Link to={`/Details/${product._id}`}>Details</Link></button>
                 </div>
                
               </div>
